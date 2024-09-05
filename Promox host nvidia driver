@@ -1,0 +1,18 @@
+echo "deb http://ftp.debian.org/debian bookworm non-free" | sudo tee -a /etc/apt/sources.list
+
+
+
+sudo apt update
+
+sudo apt install pve-headers
+
+
+
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64/3bf863cc.pub
+echo "deb https://developer.download.nvidia.com/compute/cuda/repos/debian11/x86_64 /" | sudo tee /etc/apt/sources.list.d/cuda-debian11-x86_64.list
+
+
+
+sudo apt update
+
+sudo apt install nvidia-driver
